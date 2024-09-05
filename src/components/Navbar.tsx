@@ -4,12 +4,18 @@ import logo from "../../public/icons/Kouchinni-Logo-1.svg";
 import Menu from "./Menu";
 import SearchBar from "./SearchBar";
 import NavIcons from "./NavIcons";
+import { Yantramanav } from "@next/font/google";
+
+const yantramanav = Yantramanav({
+  weight: ["900"],
+  subsets: ["latin"],
+});
 
 const Navbar = () => {
   return (
-    <div className="h-20 px-4 md:pr-8 ml-0    border b ">
+    <div className={` h-20 px-6 md:pr-8 ml-0 border text-sm`}>
       {/* mobile   */}
-      <div className=" h-full flex items-center justify-between md:hidden">
+      <div className=" h-full  flex items-center justify-between md:hidden">
         <Link href="/">
           <Image
             src={logo}
@@ -23,8 +29,10 @@ const Navbar = () => {
       {/* bigger screens   */}
       <div className="hidden md:flex items-center justify-between  h-full gap-4 ">
         <div className="w-2/3 flex items-center justify-start ">
-          <div className=" flex gap-2  space-x-2 uppercase text-sm  ">
-            <Link className="  hover:text-lama " href="/">
+          <div
+            className={` ${yantramanav.className} flex gap-2  space-x-2  uppercase`}
+          >
+            <Link className="  hover:text-lama text-x " href="/">
               Home
             </Link>
             <Link className="  hover:text-lama " href="/">
