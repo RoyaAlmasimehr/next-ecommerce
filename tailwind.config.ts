@@ -15,8 +15,8 @@ const config: Config = {
       },
       colors: {
         lama: "#F35C7A",
+        butShop: "#FFF100",
       },
-     
     },
   },
   plugins: [],
