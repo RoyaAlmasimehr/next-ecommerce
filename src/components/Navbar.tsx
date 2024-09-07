@@ -10,6 +10,7 @@ const yantramanav = Yantramanav({
   weight: ["900"],
   subsets: ["latin"],
 });
+
 const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full h-20 px-6 md:pr-8 ml-0 border text-sm bg-white z-50">
@@ -24,19 +25,23 @@ const Navbar = () => {
       <div className="hidden md:flex items-center justify-between h-full gap-4">
         <div className="w-2/3 flex items-center justify-start">
           <div
-            className={`${yantramanav.className} flex gap-2 space-x-2 uppercase`}
+            className={`${yantramanav.className} flex gap-6 uppercase text-xs`}
           >
-            <Link className="hover:text-lama text-x" href="/">
+            <Link href="/" className="group relative pb-1">
               Home
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link className="hover:text-lama" href="/">
+            <Link href="/men" className="group relative pb-1">
               Men
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link className="hover:text-lama pr-2" href="/">
+            <Link href="/women" className="group relative  pb-1">
               Women
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link className="hover:text-lama" href="/">
+            <Link href="/about" className="group relative pb-1">
               Behind the Art
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
         </div>
