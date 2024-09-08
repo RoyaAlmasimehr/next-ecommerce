@@ -42,11 +42,11 @@ const Slider = () => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{ delay: 5000, disableOnInteraction: false }} // تنظیم زمان 
-        pagination={{ clickable: true }} // تنظیمات pagination سفارشی
-        loop={true} // فعال‌سازی loop
+        autoplay={{ delay: 5000, disableOnInteraction: false }} 
+        pagination={{ clickable: true }} 
+        loop={true} 
         speed={1500}
-        modules={[Autoplay, Pagination]} // اضافه کردن ماژول‌ها
+        modules={[Autoplay, Pagination]} 
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>

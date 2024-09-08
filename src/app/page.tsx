@@ -1,3 +1,4 @@
+import CategoryList from "@/components/CategoryList"
 import ProductList from "@/components/ProductList"
 import Slider from "@/components/slider"
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <div className=''>
       <Slider  />
       <ProductList />
+      <CategoryList />
     </div>
   )
 }
