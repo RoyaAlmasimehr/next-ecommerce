@@ -7,31 +7,37 @@ import { Autoplay, Pagination } from "swiper/modules"; // اصلاح مسیر ا
 import { Yantramanav } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 const yantramanav = Yantramanav({
-  weight: ["900"],
+  weight: ["900","700"],
   subsets: ["latin"],
 });
 
 const slides = [
   {
     id: 1,
-    title: "Summer Sale Collections",
+    title: "find your activewear",
     description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img: "https://kouchinni.com/wp-content/uploads/2023/11/Kouchinni-activewear.jpg",
     url: "/shop",
   },
   {
     id: 2,
-    title: "Winter Sale Collections",
+    title: "streetwear, in style",
     description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img: "https://kouchinni.com/wp-content/uploads/2023/11/Kouchinni-club-collection.jpg",
     url: "/shop",
   },
   {
     id: 3,
-    title: "Spring Sale Collections",
+    title: "kouchinni our club ,our dynasty",
     description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img: "https://kouchinni.com/wp-content/uploads/2023/11/Kouchinni-streetwear-1.jpg",
     url: "/shop",
   },
 ];
@@ -42,11 +48,11 @@ const Slider = () => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{ delay: 5000, disableOnInteraction: false }} 
-        pagination={{ clickable: true }} 
-        loop={true} 
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        loop={true}
         speed={1500}
-        modules={[Autoplay, Pagination]} 
+        modules={[Autoplay, Pagination]}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
@@ -61,12 +67,19 @@ const Slider = () => {
                   className="absolute inset-0"
                 />
               </div>
-              <div className="absolute  inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-40">
-                <h1 className="text-xl mt-10  md:text-6xl font-bold text-center">
+              <div className="absolute  inset-0 flex flex-col items-center justify-center text-white   mt-60">
+                <h1
+                  className={`${yantramanav.className} text-4xl mt-10 md:text-5xl font-semibold text-center uppercase`}
+                >
                   {slide.title}
                 </h1>
-                <p className="mt-4 text-md md:text-2xl text-center">
-                  {slide.description}
+                <p
+                  className={` ${roboto.className} mt-4  Class
+Properties
+font-thin  text-[12px] text-center`}
+                >
+                  Search our club's colletctions and find the ideal pieces for
+                  you
                 </p>
                 <Link href={slide.url}>
                   <button

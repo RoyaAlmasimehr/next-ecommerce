@@ -17,6 +17,9 @@ const config: Config = {
         lama: "#F35C7A",
         butShop: "#FFF100",
       },
+      screens: {
+       " xs": "765px",
+      },
     },
   },
   plugins: [],
