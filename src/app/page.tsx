@@ -5,6 +5,7 @@ import Quality from "@/components/Quality"
 
 import ShopByDesign from "@/components/ShopByDesign"
 import Slider from "@/components/slider"
+import Subscription from "@/components/Subscription"
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
      <ShopByDesign />
      <Quality />
      <BehindTheArt />
+     <Subscription />
     </div>
   )
 }

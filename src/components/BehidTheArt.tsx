@@ -2,7 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { Yantramanav } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
+const roboto = Roboto({
+  weight: ["500"],
+  subsets: ["latin"],
+});
 // فونت اختصاصی
 const yantramanav = Yantramanav({
   weight: ["900", "700"],
@@ -72,16 +77,16 @@ const BehindTheArt = () => {
             </div>
 
             <div className="absolute bottom-4 left-4 z-20 transition-all duration-500 ease-in-out group-hover:bottom-16">
-              <h4
+              <h3
                 className={`${
                   yantramanav.className
-                } text-left text-lg font-bold uppercase ${
+                } text-left text-[36px] font-semibold uppercase leading-8 ${
                   design.id % 2 === 0 ? "text-black" : "text-white"
                 }`}
               >
-                <p className="text-[10px]">the story of</p>
+                <p className={`${roboto.className}  text-[11px]`}>the story of</p>
                 {design.title}
-              </h4>
+              </h3>
             </div>
 
             <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">

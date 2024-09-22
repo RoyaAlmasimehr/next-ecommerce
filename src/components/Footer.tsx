@@ -12,7 +12,7 @@ const yantramanav = Yantramanav({
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 text-black mt-10 pt-8">
+    <footer className="bg-gray-200 text-black  pt-8">
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4   gap-6 py-8">
         {/* ستون اول: لوگو و توضیحات */}
         <div className="mb-8">
@@ -42,7 +42,7 @@ const Footer = () => {
               href="https://www.tiktok.com"
               className="text-black hover:text-lama transition ease-in-out duration-500  "
             >
-              <FaTiktok className="text-2xl" /> 
+              <FaTiktok className="text-2xl" />
             </Link>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/category/sweater"
+                href="/behind-the-art"
                 className={`${yantramanav.className} font-semibold uppercase text-xs relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
               >
                 Behind the art
