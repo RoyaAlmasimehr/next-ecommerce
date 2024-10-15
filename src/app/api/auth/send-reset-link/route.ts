@@ -1,36 +1,30 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer"; // برای ارسال ایمیل
-import crypto from "crypto"; // برای تولید توکن امن
-import User from "@/models/User"; // ایمپورت مدل User
+import nodemailer from "nodemailer"; 
+import crypto from "crypto"; 
+import User from "@/models/User"; 
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  // بررسی نوع متد درخواست
+
   if (req.method !== "POST") {
-    return res.status(405).end(); // فقط روش POST را قبول می‌کنیم
+    return res.status(405).end(); 
   }
 
-  const { email } = req.body; // دریافت ایمیل از درخواست
 
-  // جستجوی کاربر بر اساس ایمیل
+
   const user = await User.findOne({ email });
   if (!user) {
-    return res.status(404).json({ message: "User not found." }); // اگر کاربر وجود نداشته باشد
-  }
 
-  // تولید توکن تصادفی برای بازیابی رمز عبور
   const token = crypto.randomBytes(32).toString("hex");
 
-  // اینجا باید توکن را در دیتابیس ذخیره کنید (به همراه زمان انقضا)
 
-  // ارسال ایمیل بازنشانی
   const transporter = nodemailer.createTransport({
-    service: "gmail", // یا سرویس ایمیل دیگری
+    service: "gmail", 
     auth: {
-      user: process.env.EMAIL_USER, // ایمیل ارسال‌کننده
-      pass: process.env.EMAIL_PASSWORD, // رمز عبور
+      user: process.env.EMAIL_USER, 
+      pass: process.env.EMAIL_PASSWORD, 
     },
   });
 

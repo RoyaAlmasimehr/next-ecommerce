@@ -8,13 +8,13 @@ export async function POST(req: Request) {
     const { email, password } = await req.json();
     const { db } = await connectToDatabase();
 
-    // پیدا کردن کاربر در دیتابیس
+
     const user = await db.collection("users").findOne({ email });
     if (!user) {
       return NextResponse.json({ message: "User not found" }, { status: 404 });
     }
 
-    // بررسی مطابقت پسورد
+
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return NextResponse.json(
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // ایجاد توکن JWT
+
     const token = jwt.sign(
       { userId: user._id, email: user.email },
       process.env.JWT_SECRET as string,
