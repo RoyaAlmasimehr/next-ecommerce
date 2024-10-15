@@ -19,7 +19,7 @@ export default function AboutTheBrand() {
     <div className="">
       <div className="w-full min-h-screen   pt-16">
         <div
-          className={`${roboto.className} text-[8px] uppercase p-6   pt-10 pl-10`}
+          className={`${roboto.className} text-[10px] uppercase p-6   pt-10 pl-10`}
         >
           <span className="text-gray-500 pr-2  ">
             <Link className="hover:text-black" href="/">
@@ -243,7 +243,7 @@ export default function AboutTheBrand() {
           </section>
         </div>
       </div>
-    <IconFooer />
+      <IconFooer />
     </div>
   );
 }

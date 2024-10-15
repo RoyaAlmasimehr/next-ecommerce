@@ -1,5 +1,6 @@
 
 const SinglePage =()=>{
+   
     return(
         <div>
             singlePage

@@ -56,7 +56,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/category/hoodie"
+                href="about-the-brand"
                 className={`${yantramanav.className} font-semibold uppercase text-xs relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
               >
                 About the brand
@@ -83,7 +83,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/men"
+                href="/contact"
                 className={`${yantramanav.className} font-semibold uppercase text-xs relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
               >
                 contact
@@ -99,7 +99,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/new-arrivals"
+                href="/faq"
                 className={`${yantramanav.className} font-semibold uppercase text-xs relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
               >
                 faq
@@ -107,7 +107,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/new-arrivals"
+                href="/terms-and-conditions"
                 className={`${yantramanav.className} font-semibold uppercase text-xs relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
               >
                 terms &conditions
@@ -115,7 +115,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/new-arrivals"
+                href="/privacy-policy"
                 className={`${yantramanav.className} font-semibold uppercase text-xs relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
               >
                 privacy policy
